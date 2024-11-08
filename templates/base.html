@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kun uz</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        td, th {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Categories</h1>
+    <table>
+        <tr>
+            {% for category in categories %}
+                <td> <a href={% url "categoryfilter" category.id %}>{{ category.name }}</td>
+            {% endfor %}
+        </tr>
+    </table>
+    {% block content $}
+
+    {% endblock context %}
+        <h1>Social</h1>
+    <table>
+        <tr>
+            {% for category in categories %}
+                <td> <a href={% url "categoryfilter" category.id %}>{{ category.name }}</td>
+            {% endfor %}
+        </tr>
+    </table>
+</body>
+</html>

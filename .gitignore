@@ -1,0 +1,6 @@
+.venv
+media
+*/__pacache__/*
+db.sqlite3
+news/migrations/*
+venv
